@@ -9,24 +9,10 @@ import { ArrowRight, Bell, AlertCircle, Info } from "lucide-react"
 const newsItems = [
   {
     id: 1,
-    date: "2024.04.08",
+    date: "2024.05.01",
     type: "info" as const,
     title: "公式サイトを公開しました",
     description: "Rino-program Hubの公式サイトを公開しました。各種活動のリンクや最新情報をお届けします。",
-  },
-  {
-    id: 2,
-    date: "2024.04.01",
-    type: "notice" as const,
-    title: "お問い合わせに関する注意事項",
-    description: "お問い合わせいただく前に、FAQページをご確認ください。",
-  },
-  {
-    id: 3,
-    date: "2024.03.25",
-    type: "update" as const,
-    title: "作品集を更新しました",
-    description: "新しいプロジェクトを作品集に追加しました。ぜひご覧ください。",
   },
 ]
 

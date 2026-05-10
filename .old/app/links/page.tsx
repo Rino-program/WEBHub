@@ -5,41 +5,33 @@ import { Footer } from "@/components/footer"
 import { ParticlesBackground } from "@/components/particles-background"
 import { FadeIn } from "@/components/fade-in"
 import { CodeReveal } from "@/components/code-reveal"
-import { Share2, ExternalLink, Twitter, Youtube, Github, MessageCircle } from "lucide-react"
+import { Share2, ExternalLink, Twitter, Github, MessageCircle, Code } from "lucide-react"
 
 // Placeholder links - can be customized
 const socialLinks = [
   {
     name: "X (Twitter)",
-    handle: "@rino_program",
-    url: "#",
+    handle: "@Rinoprogram",
+    url: "https://x.com/Rinoprogram",
     icon: Twitter,
     color: "hover:bg-sky-500/10 hover:border-sky-500/50 hover:text-sky-400",
     description: "日常のつぶやきや活動報告",
   },
   {
-    name: "YouTube",
-    handle: "@rino-program",
-    url: "#",
-    icon: Youtube,
-    color: "hover:bg-red-500/10 hover:border-red-500/50 hover:text-red-400",
-    description: "動画コンテンツを配信",
-  },
-  {
     name: "GitHub",
-    handle: "rino-program",
-    url: "#",
+    handle: "Rino-program",
+    url: "https://github.com/Rino-program",
     icon: Github,
     color: "hover:bg-gray-500/10 hover:border-gray-400/50 hover:text-gray-300",
     description: "ソースコード・プロジェクト公開",
   },
   {
-    name: "Discord",
-    handle: "Rino#0000",
-    url: "#",
-    icon: MessageCircle,
-    color: "hover:bg-indigo-500/10 hover:border-indigo-500/50 hover:text-indigo-400",
-    description: "コミュニティ・交流",
+    name: "AtCoder",
+    handle: "yakiringo",
+    url: "https://atcoder.jp/users/yakiringo",
+    icon: Code,
+    color: "hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400",
+    description: "競技プログラミング",
   },
 ]
 

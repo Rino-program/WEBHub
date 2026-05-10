@@ -7,22 +7,15 @@ import { Footer } from "@/components/footer"
 import { ParticlesBackground } from "@/components/particles-background"
 import { FadeIn } from "@/components/fade-in"
 import { CodeReveal } from "@/components/code-reveal"
-import { MessageSquare, Send, AlertTriangle, CheckCircle, Mail, Twitter, MessageCircle } from "lucide-react"
+import { MessageSquare, Send, AlertTriangle, CheckCircle, Mail, Twitter } from "lucide-react"
 
 const contactMethods = [
   {
     name: "X (Twitter) DM",
     description: "DMでお気軽にどうぞ",
     icon: Twitter,
-    link: "#",
+    link: "https://x.com/Rinoprogram",
     recommended: true,
-  },
-  {
-    name: "Discord",
-    description: "サーバーまたはDMで",
-    icon: MessageCircle,
-    link: "#",
-    recommended: false,
   },
   {
     name: "Email",
