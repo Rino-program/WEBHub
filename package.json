@@ -1,0 +1,28 @@
+{
+  "name": "webhub",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rino-program/WEBHub.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rino-program/WEBHub/issues"
+  },
+  "homepage": "https://github.com/Rino-program/WEBHub#readme",
+  "description": "",
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.6",
+    "vite": "^8.0.12",
+    "vue": "^3.5.34"
+  }
+}
