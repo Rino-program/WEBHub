@@ -3,9 +3,9 @@
     <Navigation :currentPage="currentPage" @changePage="currentPage = $event" />
     
     <main class="main-content">
-      <HomePage v-if="currentPage === 'home'" />
-      <SubPage v-else-if="currentPage === 'subpage'" />
-      <WarningsPage v-else-if="currentPage === 'warnings'" />
+      <HomePage v-if="currentPage === 'home'" :navigate="navigate" />
+      <SubPage v-else-if="currentPage === 'subpage'" :navigate="navigate" />
+      <WarningsPage v-else-if="currentPage === 'warnings'" :navigate="navigate" />
     </main>
     
     <Footer />
@@ -21,6 +21,9 @@ import SubPage from './pages/SubPage.vue'
 import WarningsPage from './pages/WarningsPage.vue'
 
 const currentPage = ref('home')
+const navigate = (page) => {
+  currentPage.value = page
+}
 </script>
 
 <style scoped>

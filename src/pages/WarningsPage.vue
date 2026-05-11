@@ -1,7 +1,12 @@
 <template>
   <div class="warnings-page">
     <h1>注意事項</h1>
-    
+
+    <nav class="page-nav">
+      <button class="nav-btn" @click="navigateTo('home')">トップページへ</button>
+      <button class="nav-btn" @click="navigateTo('subpage')">サブページ1へ</button>
+    </nav>
+
     <section class="warning-section">
       <h2>ネット上でのコミュニケーションがメインの方々へ</h2>
       
@@ -75,7 +80,16 @@
 </template>
 
 <script setup>
-// Warnings page component
+const props = defineProps({
+  navigate: {
+    type: Function,
+    required: false,
+  }
+})
+
+const navigateTo = (page) => {
+  if (props.navigate) props.navigate(page)
+}
 </script>
 
 <style scoped>
@@ -167,5 +181,24 @@
   .warning-card {
     padding: var(--spacing-md);
   }
+}
+
+.page-nav {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin: var(--spacing-md) 0;
+}
+
+.nav-btn {
+  background: none;
+  border: 1px solid var(--color-border);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius);
+  cursor: pointer;
+  color: var(--color-accent);
+}
+
+.nav-btn:hover {
+  background-color: rgba(74, 124, 140, 0.05);
 }
 </style>
