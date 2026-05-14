@@ -1,24 +1,215 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rino-program Hub | Official Website</title>
-  <meta name="description" content="Rino-program Hubの公式サイト。プロフィール、作品集、SNSリンク、お問い合わせなど。">
-  <meta name="keywords" content="Rino-program, ポートフォリオ, プログラマー, 競技プログラミング">
-  <meta name="author" content="Rino-program">
-  
-  <!-- Open Graph -->
-  <meta property="og:title" content="Rino-program Hub | Official Website">
-  <meta property="og:description" content="Rino-program Hubの公式サイト">
-  <meta property="og:type" content="website">
-  
-  <!-- Preconnect for performance -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rino-program - 公式WEBサイト</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="app"></div>
-  <script type="module" src="/src/main.js"></script>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title">Rino-program</h1>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="notice.html" class="nav-link">注意事項</a></li>
+                <li><a href="notices/index.html" class="nav-link">お知らせ一覧</a></li>
+            </ul>
+        </div>
+        <!-- Access Counter -->
+        <!-- 作成中...
+        <div class="access-counter">
+            <span id="accessCounterText">アクセス数: <span id="counter">0</span></span>
+        </div>
+        -->
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Header Section -->
+        <header class="header-section">
+            <h1>Rino-program</h1>
+            <p class="subtitle">
+                競技プログラミングを中心としたIT系の活動をしています！<br>
+                ☆JOI26二次予選進出決定☆("<a href="https://www.ioi-jp.org/wp-content/uploads/2026/03/joi_joig-2027-outline.pdf" style="text-decoration: none; color: #666;">AtCoder レーティングによる JOI 二次予選進出制度</a>"より)<br>
+                日本情報オリンピック2026年度(JOI26/27)のセミファイナルステージ(旧本戦)出場を本気で目指すことにしました！<br>
+                プログラミング学習を沢山やっていくので、是非応援よろしくお願いします！！
+            </p>
+        </header>
+
+        <!-- Notice Section -->
+        <section id="notice" class="content-section">
+            <h2>お知らせ</h2>
+            <div id="mainNoticeList" class="notice-list">
+                <!-- 最新3件を notices/data.json から読み込み表示 -->
+            </div>
+            <div class="notice-actions"><a href="notices/index.html" class="view-all-link">全て見る</a></div>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="profile" class="content-section">
+            <h2>プロフィール・自己紹介</h2>
+            <div class="profile-info">
+                <p><strong>名前:</strong> Rino-program (@Rino-program)</p>
+                <p><strong>AtCoderネーム:</strong> yakiringo</p>
+                <p><strong>学年:</strong> 高校2年生</p>
+                <p><strong>居住地:</strong> 日本</p>
+                <p><strong>将来の夢:</strong> プログラマー(IT系)</p>
+                <p><strong>憧れの人・影響を受けた人:</strong> アンコウ先生(代名詞: 師匠)</p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="content-section">
+            <h2>スキル・経験</h2>
+            <div class="skills-info">
+                <div class="skill-category">
+                    <h3>競技プログラミング</h3>
+                    <p style="margin-bottom: 5px;"><strong>AtCoder:</strong> 最高レート 781 (2026年5月10日現在)</p>
+                    <p><strong>AJL2025Winter:</strong></p>
+                    <ul>
+                        <li>Algo高一 68/204位</li>
+                        <li>Algo全体 178/626位</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>プログラミング言語</h3>
+                    <p>Python, C++</p>
+                </div>
+                <div class="skill-category">
+                    <h3>使用ツール</h3>
+                    <p>VSCode, GitHub, Git, Sublime Text, Termux</p>
+                </div>
+                <div class="skill-category">
+                    <h3>資格・大会</h3>
+                    <ul>
+                        <li>Python3エンジニア認定基礎試験 合格 (900/1000点) - 2025年2月</li>
+                        <li>Pythonプログラミング能力認定試験2級 合格 (88%) - 2025年6月</li>
+                        <li>ロボット検定2級 合格</li>
+                        <li>日本情報オリンピック25/26年 二次予選出場, 予選Bランク</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>経験年数 (多少の誤差アリ)</h3>
+                    <ul>
+                        <li>競技プログラミング: 2年目</li>
+                        <li>Python: 3年目</li>
+                        <li>プログラミング全体: 7年目</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>勉強中(取得予定)</h3>
+                    <p>基本情報技術者試験, AWS認定資格</p>
+                </div>
+            </div>
+        </section>
+
+        <!--
+
+        <section id="timeline" class="content-section">
+            <h2>年表 (多少の誤差アリ)</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-year">2020年</span>
+                    <span class="timeline-text">小学五年: Scratchでプログラミングを始める</span>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-year">2024年</span>
+                    <span class="timeline-text">中学三年ごろ: Python学習サイト「toypro」でPythonを始める</span>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-year">2025年2月</span>
+                    <span class="timeline-text">Python3エンジニア認定基礎試験 合格</span>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-year">2025年5月</span>
+                    <span class="timeline-text">高校一年: AtCoderを始める</span>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-year">2025年6月</span>
+                    <span class="timeline-text">Pythonプログラミング能力認定試験2級 合格</span>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-year">2025年12月</span>
+                    <span class="timeline-text">日本情報オリンピック25年 二次予選出場, 予選Bランク</span>
+                </div>
+            </div>
+        </section>
+        -->
+
+        <!-- Links Section -->
+        <section id="links" class="content-section">
+            <h2>リンク</h2>
+            <div class="links-info">
+                <div class="link-category">
+                    <h3>X (旧Twitter)</h3>
+                    <ul>
+                        <li><a href="https://x.com/Rinoprogram" target="_blank">メインアカウント @Rinoprogram</a></li>
+                        <li><a href="https://x.com/RinoproSub" target="_blank">サブアカウント @RinoproSub</a></li>
+                        <li><a href="https://x.com/Rinopro_sys" target="_blank">運営/管理側アカウント @Rinopro_sys</a></li>
+                    </ul>
+                </div>
+                <div class="link-category">
+                    <h3>GitHub</h3>
+                    <ul>
+                        <li><a href="https://github.com/Rino-program" target="_blank">メインアカウント @Rino-program</a></li>
+                    </ul>
+                </div>
+                <div class="link-category">
+                    <h3>AtCoder</h3>
+                    <ul>
+                        <li><a href="https://atcoder.jp/users/yakiringo" target="_blank">アカウント @yakiringo</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interests Section -->
+        <section id="interests" class="content-section">
+            <h2>興味のある分野(趣味など)</h2>
+            <ul class="interests-list">
+                <li>IT系(特にプログラミング)</li>
+                <li>競技プログラミング</li>
+                <li>AI・LLMに関しての研究</li>
+                <li>宇宙開発(主に太陽系内)</li>
+            </ul>
+        </section>
+
+        <!-- Q&A Section -->
+        <section id="qa" class="content-section">
+            <h2>Q＆A</h2>
+            <div class="notice-list">
+                <div class="notice-item">
+                    <p><strong>Q. 依頼等は受け付けていますか？</strong></p>
+                    <p><strong>A.</strong> はい。パソコン関係の依頼だとさらに歓迎です。</p>
+                </div>
+                <p>他にも何かあれば追加します。</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="content-section">
+            <h2>連絡先</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>1. X (旧Twitter) のDM</h3>
+                    <p><a href="https://x.com/Rinoprogram" target="_blank">https://x.com/Rinoprogram</a></p>
+                </div>
+                <div class="contact-item">
+                    <h3>2. Gmail</h3>
+                    <p><a href="mailto:Rinoprogram.Coder@gmail.com">Rinoprogram.Coder@gmail.com</a></p>
+                    <p class="note">※ 返信に時間がかかる可能性があります、ご了承ください。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Rino-program. Unauthorized reproduction is prohibited.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

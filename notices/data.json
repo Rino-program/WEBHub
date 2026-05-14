@@ -1,0 +1,18 @@
+{
+  "notices": [
+    {
+      "id": "001",
+      "date": "2026-05-14",
+      "title": "注意事項ページ公開",
+      "preview": "<strong>重要: 注意事項</strong>を公開しました。",
+      "detailPage": "detail-001.html"
+    },
+    {
+      "id": "002",
+      "date": "2026-05-13",
+      "title": "公式WEBサイト公開",
+      "preview": "公式WEBサイトを公開しました。",
+      "detailPage": "detail-002.html"
+    }
+  ]
+}

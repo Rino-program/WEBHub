@@ -1,0 +1,11 @@
+/* Notices-specific styles (minimal). Imports main styles for consistency. */
+@import url("../styles.css");
+
+.notice-card, .notice-item {
+  border-bottom: 1px solid #e6e6e6;
+  padding: 10px 0;
+}
+.notice-card h3 { margin: 0 0 6px 0; }
+.notice-preview { color: #333; }
+.notice-detail-link { margin-left: 8px; color: var(--primary-color); text-decoration: none; }
+.view-all-link { display: inline-block; margin-top: 8px; }

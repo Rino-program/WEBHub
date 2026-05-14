@@ -97,3 +97,6 @@ Gmailは少し返信に時間がかかる可能性があります、ご了承く
 ネットでのコミュニケーションがメインの方々よりもかなり厳しい注意事項になります。
 これはリアルに影響を与える事を阻止したい為です。
 高頻度で更新する予定なので、定期的に確認してください。
+
+<div class="notice-item"><a href="notice.html" style="text-decoration: underline; color: #000;"><strong>注意事項</strong></a>を公開しました。</div>
+<div class="notice-item">公式WEBサイトを公開しました。</div>
