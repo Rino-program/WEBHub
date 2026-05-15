@@ -1,6 +1,10 @@
 /* Notices-specific styles (minimal). Imports main styles for consistency. */
 @import url("../styles.css");
 
+html {
+  scroll-padding-top: 80px;
+}
+
 .notice-card, .notice-item {
   border-bottom: 1px solid #e6e6e6;
   padding: 10px 0;
