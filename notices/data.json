@@ -13,6 +13,13 @@
       "title": "公式WEBサイト公開",
       "preview": "公式WEBサイトを公開しました。",
       "detailPage": "detail-002.html"
+    },
+    {
+      "id": "003",
+      "date": "2026-05-17",
+      "title": "AtCoderで緑レート(800)を達成しました！",
+      "preview": "AtCoderで緑レート(800)を達成する事ができました！",
+      "detailPage": "detail-003.html"
     }
   ]
 }
