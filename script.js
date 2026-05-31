@@ -56,10 +56,14 @@ async function loadMainNotices() {
         if (!res.ok) return;
         const data = await res.json();
         const notices = Array.isArray(data.notices) ? data.notices : [];
+        const latestNotices = notices
+            .slice()
+            .sort((a, b) => Number(b.id) - Number(a.id))
+            .slice(0, 3);
         const container = document.getElementById('mainNoticeList');
         if (!container) return;
         container.innerHTML = '';
-        notices.slice(0, 3).forEach(n => {
+        latestNotices.forEach(n => {
             // create a clickable card that navigates to detail page when tapped
             const cardLink = document.createElement('a');
             cardLink.className = 'notice-card-link';

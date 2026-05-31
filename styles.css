@@ -410,6 +410,210 @@ html {
     margin-bottom: 0.5rem;
 }
 
+/* Community page */
+.page-hero {
+    background: linear-gradient(135deg, rgba(138, 123, 216, 0.12), rgba(255, 255, 255, 0.95));
+    border: 1px solid rgba(138, 123, 216, 0.22);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.hero-kicker {
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    color: var(--primary-color);
+    font-size: 0.92rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.page-hero h1 {
+    font-size: 2.4rem;
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+}
+
+.section-lead {
+    color: #555;
+    margin-bottom: 0.25rem;
+    line-height: 1.8;
+}
+
+.quick-jump {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+}
+
+.quick-jump a {
+    display: inline-block;
+    padding: 0.5rem 0.9rem;
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    text-decoration: none;
+    color: var(--text-color);
+    background-color: rgba(255, 255, 255, 0.85);
+    transition: border-color 0.3s, color 0.3s, background-color 0.3s;
+}
+
+.quick-jump a:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    background-color: #fff;
+}
+
+.community-list {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.community-card {
+    padding: 1.25rem;
+    background-color: #f9f9f9;
+    border-left: 4px solid var(--primary-color);
+    border-radius: 8px;
+}
+
+.community-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.community-badge {
+    display: inline-block;
+    margin-bottom: 0.4rem;
+    padding: 0.25rem 0.7rem;
+    background-color: rgba(138, 123, 216, 0.12);
+    color: var(--primary-color);
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.community-title {
+    margin: 0;
+    font-size: 1.35rem;
+}
+
+.community-status {
+    max-width: 34rem;
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.community-body-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.community-block {
+    background-color: #fff;
+    border: 1px solid #ececec;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.community-block h4 {
+    margin-top: 0;
+    margin-bottom: 0.65rem;
+    color: var(--primary-color);
+    font-size: 1.05rem;
+}
+
+.community-subgrid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.person-list {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.person-card {
+    padding: 0.85rem 1rem;
+    background-color: #f7fbff;
+    border: 1px solid #dfe9f6;
+    border-radius: 8px;
+}
+
+.person-card h5 {
+    margin: 0 0 0.35rem 0;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.person-card p {
+    color: #555;
+}
+
+.community-meta-list {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    gap: 0.5rem;
+}
+
+.community-meta-list li {
+    padding: 0.6rem 0.8rem;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+}
+
+.community-meta-list strong {
+    color: var(--primary-color);
+}
+
+.community-note {
+    background-color: #fdfaf2;
+    border-color: #f0e0b8;
+}
+
+.community-note p {
+    color: #5d5134;
+}
+
+.template-card {
+    padding: 1.25rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px dashed rgba(138, 123, 216, 0.5);
+}
+
+.template-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.template-field {
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #ececec;
+}
+
+.template-field h3 {
+    margin-top: 0;
+    margin-bottom: 0.45rem;
+    font-size: 1rem;
+    color: var(--primary-color);
+}
+
+.template-field p {
+    color: #555;
+    line-height: 1.7;
+}
+
 /* Footer */
 .footer {
     background-color: var(--navbar-bg);
@@ -464,6 +668,19 @@ html {
         font-size: 1.5rem;
     }
 
+    .page-hero {
+        padding: 1.5rem;
+    }
+
+    .page-hero h1 {
+        font-size: 2rem;
+    }
+
+    .template-grid,
+    .community-subgrid {
+        grid-template-columns: 1fr;
+    }
+
     .timeline {
         padding-left: 1rem;
     }
@@ -492,6 +709,10 @@ html {
 @media (max-width: 480px) {
     .header-section h1 {
         font-size: 1.5rem;
+    }
+
+    .page-hero h1 {
+        font-size: 1.7rem;
     }
 
     .nav-title {
