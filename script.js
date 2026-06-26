@@ -108,3 +108,24 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// サブナビの位置をメインnavbarの高さに動的に合わせる
+function adjustSubNavbar() {
+    const navbar = document.querySelector('.navbar');
+    const subNavbar = document.querySelector('.sub-navbar');
+    
+    if (navbar && subNavbar) {
+        const navHeight = navbar.offsetHeight;
+        subNavbar.style.top = `${navHeight}px`;
+        
+        // scroll-paddingも動的に調整
+        document.documentElement.style.scrollPaddingTop = `${navHeight + subNavbar.offsetHeight + 10}px`;
+    }
+}
+
+// ページ読み込み時 + リサイズ時
+window.addEventListener('load', adjustSubNavbar);
+window.addEventListener('resize', adjustSubNavbar);
+
+// 念のため少し遅らせて再調整（画像読み込み後など）
+setTimeout(adjustSubNavbar, 300);

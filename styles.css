@@ -30,7 +30,6 @@ html {
 /* Navbar */
 .navbar {
     background-color: var(--navbar-bg);
-    box-shadow: var(--shadow);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -774,4 +773,53 @@ html {
         padding: 10px 12px;
         max-width: 100%;
     }
+}
+
+/* サブナビゲーション */
+.sub-navbar {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 52px;                    /* メインnavbarの高さに合わせる */
+    z-index: 99;
+    margin-top: 0;                /* ← これを追加 */
+    padding: 0.5rem 0;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.08);
+}
+
+.sub-nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.sub-nav-menu {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 0.4rem;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.sub-nav-link {
+    display: block;
+    padding: 0.45rem 1rem;
+    color: #333;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+}
+
+.sub-nav-link:hover,
+.sub-nav-link.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* スクロール時の余白調整 */
+html {
+    scroll-padding-top: 120px;   /* メインnavbar + サブnavbar の高さ分 */
 }
